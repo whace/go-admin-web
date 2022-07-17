@@ -10,6 +10,11 @@ const Header = (props) => {
 
 const PREFIX = 'AppBar';
 
+export const AppBarClasses = {
+  appBar: `${PREFIX}-appBar`,
+  title:`${PREFIX}-title`
+}
+
 const StyleAppBar = styled(MuiAppBar, {
   name: PREFIX,
   overridesResolver: (props, style) => StyleSheet.root,
