@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  sidebarCollapse: false,
+  sidebarCollapsed: false,
 };
 
 const appSlice = createSlice({
@@ -9,11 +9,14 @@ const appSlice = createSlice({
   initialState,
   reducers: {
     triggerSidebar(state) {
-      state.sidebarCollapse = !sidebarCollapse;
+      debugger
+      state.sidebarCollapsed = !state.sidebarCollapsed;
     },
   },
 });
 
-export const { triggerSidebar } = appSlice;
+export const { triggerSidebar } = appSlice.actions;
+
+export const selSidebarCollapsed = state => state.app.sidebarCollapsed
 
 export default appSlice.reducer;

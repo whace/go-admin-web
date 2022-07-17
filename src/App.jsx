@@ -1,12 +1,14 @@
 
 import { useScrollTrigger,Slide } from '@mui/material';
 import { useState } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import Routes from '/@/routers';
 function App() {
-  debugger
   return (
     <div className='App'>
-      {/* <Routes/> */}
+      <BrowserRouter>
+        <Routes/>
+      </BrowserRouter>
     </div>
   );
 }

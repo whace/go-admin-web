@@ -1,14 +1,18 @@
-import { AppBar as MuiAppBar, styled } from '@mui/material';
+import { AppBar as MuiAppBar, styled, Toolbar } from '@mui/material';
+import SidebarToggleButton from './components/SidebarToggleButton';
 
 const Header = (props) => {
-  retrun(
+  const {color = 'secondary'} = props
+  return  (
     <StyleAppBar>
-      <Toolbar></Toolbar>
-    </StyleAppBar>,
-  );
-};
+      <Toolbar>
+        <SidebarToggleButton />
+      </Toolbar>
+    </StyleAppBar>
+  )
+}
 
-const PREFIX = 'AppBar';
+const PREFIX = 'AceAppBar';
 
 export const AppBarClasses = {
   appBar: `${PREFIX}-appBar`,
@@ -19,3 +23,5 @@ const StyleAppBar = styled(MuiAppBar, {
   name: PREFIX,
   overridesResolver: (props, style) => StyleSheet.root,
 })(({ theme }) => ({}));
+
+export default Header

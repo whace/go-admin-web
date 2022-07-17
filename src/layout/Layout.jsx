@@ -1,4 +1,7 @@
 import { styled } from '@mui/material';
+import { ErrorBoundary } from 'react-error-boundary';
+import Header from './Header';
+import projectConfig from '/@/config/projectConfig';
 
 const PREFIX = "AceLayout"
 
@@ -18,9 +21,25 @@ const StyledLayout = styled('div', {
   }
 }));
 
-const Layout = (props) => {
-  return <StyledLayout>zsc</StyledLayout>;
+const Layout = ({title}) => {
+  return (<StyledLayout>
+    <div>
+      <Header  title={title}/>
+      <main>
+        <Sidebar>
+          
+        </Sidebar>
+        <ErrorBoundary>
+
+        </ErrorBoundary>
+      </main>
+    </div>
+  </StyledLayout>);
 };
+
+Layout.defaultProps={
+  title: projectConfig.headTitle
+}
 
 
 export default Layout
