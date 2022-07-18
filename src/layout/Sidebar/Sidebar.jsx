@@ -1,31 +1,28 @@
-import styled from 'node_modules/@emotion/styled/types/index'
-import { Drawer } from 'node_modules/@mui/material/index'
-import paperClasses from '@mui/material/Paper/paperClasses'
+import styled from 'node_modules/@emotion/styled/types/index';
+import { Drawer } from 'node_modules/@mui/material/index';
+import paperClasses from '@mui/material/Paper/paperClasses';
 
 function Sidebar() {
-  return (
-    
-  )
+  return <div>a</div>;
 }
 
-const PREFIX = "AceSidebar"
+const PREFIX = 'AceSidebar';
 
-const StyledDrawer = styled(Drawer,{
+const StyledDrawer = styled(Drawer, {
   name: PREFIX,
   slot: 'Root',
-  overridesResolver:(porps, styles)=> styles.root,
-  shouldForwardProp: () => true
-})(({open,theme})=>({
+  overridesResolver: (props, styles) => styles.root,
+  shouldForwardProp: () => true,
+})(({ open, theme }) => ({
   marginTop: 0,
-  transition: theme.transitions.create('margin',{
-    easing: theme.thransitions.easing.easOut,
-    duration: theme.transitions.duration.enteringScreen
+  transition: theme.transitions.create('margin', {
+    easing: theme.transitions.easing.easOut,
+    duration: theme.transitions.duration.enteringScreen,
   }),
-  [`& ${paperClasses.root}`]:{
+  [`& ${paperClasses.root}`]: {
     position: 'relative',
-    width: open
-      
-  }
-}))
+    width: open,
+  },
+}));
 
-export default Sidebar
+export default Sidebar;

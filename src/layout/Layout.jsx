@@ -3,7 +3,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import Header from './Header';
 import projectConfig from '/@/config/projectConfig';
 
-const PREFIX = "AceLayout"
+const PREFIX = 'AceLayout';
 
 const LayoutClasses = {};
 
@@ -16,30 +16,25 @@ const StyledLayout = styled('div', {
   backgroundColor: theme.palette.background.default,
   position: 'relative',
   color: theme.palette.getContrastText(theme.palette.background.default),
-  [`& .${LayoutClasses.appFrame}`]:{
-
-  }
+  [`& .${LayoutClasses.appFrame}`]: {},
 }));
 
-const Layout = ({title}) => {
-  return (<StyledLayout>
-    <div>
-      <Header  title={title}/>
-      <main>
-        <Sidebar>
-          
-        </Sidebar>
-        <ErrorBoundary>
-
-        </ErrorBoundary>
-      </main>
-    </div>
-  </StyledLayout>);
+const Layout = ({ title }) => {
+  return (
+    <StyledLayout>
+      <div>
+        <Header title={title} />
+        <main>
+          <Sidebar></Sidebar>
+          <ErrorBoundary></ErrorBoundary>
+        </main>
+      </div>
+    </StyledLayout>
+  );
 };
 
-Layout.defaultProps={
-  title: projectConfig.headTitle
-}
+Layout.defaultProps = {
+  title: projectConfig.headTitle,
+};
 
-
-export default Layout
+export default Layout;

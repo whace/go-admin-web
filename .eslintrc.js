@@ -5,16 +5,22 @@ module.exports = {
     browser: true,
     node: true,
   },
-  extends: 'eslint:recommended',
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'prettier',
+    'plugin:prettier/recommended',
+  ],
   plugins: [
-    "react",
+    'react',
     // 使用 Prettier 的代码风格规则
     // 并用 Prettier 来自动修复代码
     'prettier',
   ],
   parserOptions: {
     sourceType: 'module',
-    jsxPragma: 'React',
+    // jsxPragma: 'React',
   },
   rules: {
     'max-len': ['error', { code: 80 }],

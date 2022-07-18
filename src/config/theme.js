@@ -1,48 +1,50 @@
-export const defaultTheme = {
-    palette: {
-        background: {
-            default: '#fafafb',
-        },
-        secondary: {
-            light: '#6ec6ff',
-            main: '#2196f3',
-            dark: '#0069c0',
-            contrastText: '#fff',
-        },
+const defaultTheme = {
+  palette: {
+    background: {
+      default: '#fafafb',
     },
-    typography: {
-        h6: {
-            fontWeight: 400,
-        },
+    secondary: {
+      light: '#6ec6ff',
+      main: '#2196f3',
+      dark: '#0069c0',
+      contrastText: '#fff',
     },
-    sidebar: {
-        width: 240,
-        closedWidth: 50,
+  },
+  typography: {
+    h6: {
+      fontWeight: 400,
     },
-    components: {
-        MuiFilledInput: {
-            styleOverrides: {
-                root: {
-                    backgroundColor: 'rgba(0, 0, 0, 0.04)',
-                    '&$disabled': {
-                        backgroundColor: 'rgba(0, 0, 0, 0.04)',
-                    },
-                },
-            },
+  },
+  sidebar: {
+    width: 240,
+    closedWidth: 50,
+  },
+  components: {
+    MuiFilledInput: {
+      styleOverrides: {
+        root: {
+          backgroundColor: 'rgba(0, 0, 0, 0.04)',
+          '&$disabled': {
+            backgroundColor: 'rgba(0, 0, 0, 0.04)',
+          },
         },
-        MuiTextField: {
-            defaultProps: {
-                variant: 'filled' ,
-                margin: 'dense' ,
-                size: 'small' ,
-            },
-        },
-        MuiFormControl: {
-            defaultProps: {
-                variant: 'filled',
-                margin: 'dense',
-                size: 'small',
-            },
-        },
+      },
     },
+    MuiTextField: {
+      defaultProps: {
+        variant: 'filled',
+        margin: 'dense',
+        size: 'small',
+      },
+    },
+    MuiFormControl: {
+      defaultProps: {
+        variant: 'filled',
+        margin: 'dense',
+        size: 'small',
+      },
+    },
+  },
 };
+
+export default defaultTheme;
