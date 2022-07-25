@@ -1,9 +1,9 @@
-import styled from 'node_modules/@emotion/styled/types/index';
-import { Drawer } from 'node_modules/@mui/material/index';
+import { Box } from '@mui/material';
+import { Drawer, styled } from '@mui/material';
 import paperClasses from '@mui/material/Paper/paperClasses';
 
 function Sidebar() {
-  return <div>a</div>;
+  return <Box>a</Box>;
 }
 
 const PREFIX = 'AceSidebar';

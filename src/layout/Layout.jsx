@@ -1,6 +1,7 @@
 import { styled } from '@mui/material';
 import { ErrorBoundary } from 'react-error-boundary';
 import Header from './Header';
+import Sidebar from './Sidebar/Sidebar';
 import projectConfig from '/@/config/projectConfig';
 
 const PREFIX = 'AceLayout';

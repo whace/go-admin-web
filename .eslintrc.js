@@ -6,7 +6,7 @@ module.exports = {
     node: true,
   },
   extends: [
-    'eslint:recommended',
+    // 'eslint:recommended',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'prettier',
@@ -24,5 +24,6 @@ module.exports = {
   },
   rules: {
     'max-len': ['error', { code: 80 }],
+    'react/prop-types': 0,
   },
 };
